@@ -1,40 +1,50 @@
 import PropTypes from 'prop-types';
+import {   ProfileCard,
+  Img,
+  Title,
+    Tag,
+  Location,
+  StatsList,
+  ListItem,
+  LabelText,
+  QuantityText, } from './Profile.styled';
+
 
 
 export default function Profile ({username, tag, location,avatar, stats }) {
    
 return (
-    <div className="profile">
+    <ProfileCard>
         <div className="description">
-            <img
+            <Img
                 src={avatar}
                 alt={username}
                 className="avatar"
             />
-            <p className="name">{username}</p>
-            <p className="tag">{tag}</p>
-            <p className="location">{location}</p>
+            <Title>{username}</Title>
+            <Tag>{tag}</Tag>
+            <Location>{location}</Location>
         </div>
 
-        <ul className="stats">
-            <li>
-                <span className="label">Followers</span>
-                <span className="quantity">{stats.followers}</span>
-            </li>
-            <li>
-                <span className="label">Views</span>
-                <span className="quantity">{stats.views}</span>
-            </li>
-            <li>
-                <span className="label">Likes</span>
-                <span className="quantity">{stats.likes}</span>
-            </li>
-        </ul>
-        </div>
+        <StatsList>
+            <ListItem>
+                <LabelText>Followers</LabelText>
+                <QuantityText>{stats.followers}</QuantityText>
+            </ListItem>
+            <ListItem>
+                <LabelText>Views</LabelText>
+                <QuantityText>{stats.views}</QuantityText>
+            </ListItem>
+            <ListItem>
+                <LabelText>Likes</LabelText>
+                <QuantityText>{stats.likes}</QuantityText>
+            </ListItem>
+        </StatsList>
+        </ProfileCard>
 )
 }
 
-Profile.PropTypes = {
+Profile.propTypes = {
     username: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
