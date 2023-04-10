@@ -12,9 +12,13 @@ export default function FriendListItem({ id, avatar, isOnline, name }) {
    alt="User avatar"
     width="48" />
             <Name>{name}</Name>
-</ItemCard>)
-    
-    
-        
+</ItemCard>) 
    
 }
+
+
+FriendListItem.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+};

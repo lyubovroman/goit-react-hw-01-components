@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 
 export const StatisticsSection = styled.section`
-
+width: 420px;
 box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
   border-radius: 30px;
@@ -10,6 +10,7 @@ box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.25);
 `;
 
 export const StatTitle = styled.h2`
+font-size: 30px;
 padding: 25px 120px;
   background-color: #fff;
 `;
@@ -17,7 +18,6 @@ padding: 25px 120px;
 export const StatList = styled.ul`
 display: flex;
 
-gap: 10px;
 
 `;
 
@@ -29,6 +29,9 @@ display: flex;
   padding: 15px 0;
   background-color: grey;
   border-radius: 30px;
+      box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.25);
+    border: solid 1px #eeee;
+
   
    &:hover {
     scale: 1.15;
