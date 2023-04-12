@@ -7,12 +7,14 @@ export default function Statistics({ title, stats}) {
   <StatTitle>{title}</StatTitle>
 
         <StatList>
-        {stats.map(({ id, label, percentage }) => (
-          <StatItem key={id} >
-            <LabelText>{label}</LabelText>
-            <PercentageText>{percentage}%</PercentageText>
-          </StatItem>
-        ))}
+          {stats.map(({ id, label, percentage }) => {
+            return (
+              <StatItem key={id} >
+                <LabelText>{label}</LabelText>
+                <PercentageText>{percentage}%</PercentageText>
+              </StatItem>
+            )
+          })}
       </StatList>
 </StatisticsSection>
     )
